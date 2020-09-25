@@ -7,13 +7,17 @@ const wrkoutSchema = new Schema({
         type: Date,
         default: Date.now
     },
-    duration: Number,
-    amountPerfromed: Number,
-    TotalWeightLifted: Number,
-    TotalSets: Number,
-    TotalReps: Number,
-    TotalDistance:Number
-
+    Workouts:[
+        {   
+            name: { String, trim: true},
+            type: { String, trim: true},
+            duration: { Number },
+            Weight: {Number},
+            Reps: {Number},
+            sets:{Number},
+            distance:{Number}
+        }
+    ]
 });
 
 const wrkout = mongoose.model("Workouts", wrkoutSchema);
