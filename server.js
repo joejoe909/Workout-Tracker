@@ -15,8 +15,8 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/wtDb",{
 });
 
 //routes
-app.use(require("./routes/api-route.js"));
-app.use(require("./routes/html-route.js"));
+app.use(require("./routes/api-routes.js"));
+app.use(require("./routes/html-routes.js"));
 //init the server
 app.listen(PORT, () => {
     console.log(`App running on port ${PORT}`);
