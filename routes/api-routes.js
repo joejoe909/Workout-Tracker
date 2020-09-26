@@ -24,7 +24,7 @@ router.post("/api/workouts", ({body}, res) =>{
 
 //completed workouts
 router.post("/api/workouts", (req, res) =>{
-    console.log("api-routes.js 27")
+    console.log("api-routes.js L27")
     wo.insertMany(body).then(woDb =>{
         res.json(woDb);
     }).catch(err => {
